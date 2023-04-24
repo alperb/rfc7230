@@ -1,0 +1,22 @@
+version: '3'
+services:
+  proxy:
+    build: ./proxy
+    depends_on:
+      - app
+    ports:
+      - "9900:5500"
+    networks:
+      - internal
+      - default
+
+  
+  app:
+    build: ./app
+    networks:
+      - internal
+
+networks:
+    default:
+    internal:
+        internal: true
