@@ -5,7 +5,7 @@ services:
     depends_on:
       - app
     ports:
-      - "9900:5500"
+      - "9980:5500"
     networks:
       - internal
       - default
